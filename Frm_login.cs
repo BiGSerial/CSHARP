@@ -28,9 +28,9 @@ namespace ClientesApp2
 
             if (entrada.verificarLogin() == "aceito")
             {
-                frm_menu form = new frm_menu();
+                Frm_menu form = new Frm_menu();
                 this.Hide();      //esconde o formulario de login
-                form.ShowDialog();
+                form.Show();
             }
             else
             {
@@ -40,37 +40,6 @@ namespace ClientesApp2
         }
     }
 
-    internal class FazerLogin
-    {
-        public string login { get; set; }
-        public string senha { get; set; }
-
-        public ConexaoBD banco = new ConexaoBD();
-
-        public string verificarLogin()
-        {
-            this.banco.conectar();
-            try
-            {
-                MySqlDataReader reader = this.banco.Query("SELECT * FROM login WHERE usuario='" + this.login + "' AND senha='" + this.senha + "'");
-
-                if (reader.Read())
-                {
-                    return "aceito";
-                }
-                else
-                {
-                    return "negado";
-                }
-            }
-            catch (Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show("ERRO ao fazer a verificação na base da dados");
-            }
-            this.banco.close();
-            return "negado";
-        }
-    }
-
+   
 
 }

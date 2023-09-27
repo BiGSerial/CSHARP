@@ -105,7 +105,7 @@ namespace ClientesApp2
 
         private void Frm_login_Load(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            
         }
 
         #endregion

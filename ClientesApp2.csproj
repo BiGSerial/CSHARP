@@ -98,7 +98,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Endereco.cs" />
+    <Compile Include="Paciente.cs" />
+    <Compile Include="FazerLogin.cs" />
     <Compile Include="ConexaoBD.cs" />
+    <Compile Include="Frm_relatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_relatorio.Designer.cs">
+      <DependentUpon>Frm_relatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_paciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_paciente.Designer.cs">
+      <DependentUpon>Frm_paciente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,11 +128,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_paciente.resx">
+      <DependentUpon>Frm_paciente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_login.resx">
       <DependentUpon>Frm_login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_menu.resx">
       <DependentUpon>Frm_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_relatorio.resx">
+      <DependentUpon>Frm_relatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
